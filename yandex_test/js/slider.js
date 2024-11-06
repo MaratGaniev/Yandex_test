@@ -30,8 +30,8 @@ function activateSlider(slider) {
 
 	const resetSlide = () => {
 		const { slidePerScreen, screenCount } = getSlidePerScreen();
-		currentSlide = Math.floor(getCurrentIndex() / slidePerScreen);
-		moveSlides();
+		currentSlide = Math.floor(getCurrentIndex() / slidePerScreen) - 1;
+		nextSlide();
 		setPagination();
 	};
 
@@ -80,13 +80,14 @@ function activateSlider(slider) {
 	};
 
 	const setPagination = () => {
+		const { slidePerScreen, screenCount } = getSlidePerScreen();
 		const index = getCurrentIndex();
 		if (paginationType === 'count') {
+			if (screenCount !== slideCount) slideCount = screenCount;
 			slider.querySelector('.slider__pagination .slider__current').textContent =
 				index;
 		}
 		if (paginationType === 'dots') {
-			const { slidePerScreen, screenCount } = getSlidePerScreen();
 			if (screenCount !== slideCount) {
 				slider.querySelector('.slider__dotes').innerHTML =
 					'<button class="slider__dot"></button>'.repeat(screenCount);
@@ -110,7 +111,6 @@ function activateSlider(slider) {
 	};
 
 	const nextSlide = () => {
-		const thisIndex = getCurrentIndex();
 		if (currentSlide < slideCount) {
 			currentSlide++;
 			moveSlides();

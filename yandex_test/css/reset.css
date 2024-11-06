@@ -17,12 +17,11 @@ body {
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
 	line-height: 1.2;
-	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 
 a,
-a:visited,
-a:-webkit-any-link {
+a:visited {
 	text-decoration: none;
 }
 
