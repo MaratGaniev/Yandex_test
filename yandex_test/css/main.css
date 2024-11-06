@@ -856,12 +856,12 @@
 		top: 62px;
 	}
 
-	.second_stage {
+	.second_stage, .fifth_stage {
 		grid-column: unset;
 		padding-top: 0;
 	}
 
-	.second_stage::before {
+	.second_stage::before, .fifth_stage::before {
 		top: 0;
 	}
 
