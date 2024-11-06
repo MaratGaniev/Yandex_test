@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.2;
+	-webkit-text-size-adjust: 100%;
+}
+
+a,
+a:visited,
+a:-webkit-any-link {
+	text-decoration: none;
+}
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	border: none;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+section {
+	width: 100%;
+}
