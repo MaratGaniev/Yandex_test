@@ -30,8 +30,7 @@ function activateSlider(slider) {
 
 	const resetSlide = () => {
 		const { slidePerScreen, screenCount } = getSlidePerScreen();
-		currentSlide = Math.ceil(getCurrentIndex() / slidePerScreen);
-		console.log(currentSlide);
+		currentSlide = Math.floor(getCurrentIndex() / slidePerScreen);
 		moveSlides();
 		setPagination();
 	};
