@@ -1,0 +1,80 @@
+h2 {
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.new-timer {
+    display: flex;
+    gap: 16px;
+}
+
+#time-input {
+    height: 59px;
+    min-width: 300px;
+    font-size: 20px;
+    line-height: 29px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 2px solid #7f4ea8;
+    border-radius: 16px;
+}
+
+#time-input:focus,
+#time-input:active,
+#time-input:focus-visible,
+#time-input:focus-within {
+    border: 2px solid #511c8c;
+}
+
+#add-timer {
+    height: 59px;
+    font-size: 20px;
+    line-height: 29px;
+    padding: 15px 25px;
+    border-radius: 16px;
+    border: none;
+    background-color: #7f4ea8;
+    color: #f5edf0;
+    cursor: pointer;
+}
+
+#timers {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+    list-style-type: none;
+}
+
+.timers__item {
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #511c8c;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.timer__title {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.countdown {
+    font-size: 30px;
+    font-weight: 600;
+    color: #7f4ea8;
+}
+
+.timer__control {
+    height: 40px;
+    font-size: 18px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff4966;
+    color: #f5edf0;
+    cursor: pointer;
+}
